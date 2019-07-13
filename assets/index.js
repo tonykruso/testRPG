@@ -1,3 +1,37 @@
+//15 sec timer
+var t = 60;
+var intervalId;
+
+function countDown(){
+    if (!intervalId){
+        intervalId = setInterval(decrement, 1000);
+    }
+}
+
+//timer countdown
+function decrement(){
+    t--;
+    $('#countdown').fadeOut(300, function () {
+        $('#countdown').text(t);
+        $('#countdown').show();  
+    });
+
+    //when timer runs out:
+    if(t===0){
+        alert("YOU LOSE. TOO SLOW LOSER.");
+    }    
+}
+
+countDown();
+
+// function resetClock(){
+//     clearInterval(intervalId);
+//     intervalId=null;
+//     t=15;
+//     countDown();
+// }
+
+
 
 //initial health at 100 for each fighter
 var userHealth = 100;
@@ -5,11 +39,11 @@ var enemyHealth = 100;
 
 
 //user attacks
-var bigAttack = 20;
-var smallAttack = 5;
+var bigAttack = 18;
+var smallAttack = 8;
 
 //enemy attacks
-var enemyBigAttack = 19;
+var enemyBigAttack = 21;
 var enemySmallAttack = 7;
 
 
@@ -17,13 +51,13 @@ var enemySmallAttack = 7;
 $(".smallAttack").on("click", function(){
     enemyHealth -= smallAttack;
     $("#enemyHealth").text(enemyHealth);
-    if (enemyHealth === 0){
+    if (enemyHealth <= 0){
         alert("you win");
 }})
 $(".bigAttack").on("click", function(){
     enemyHealth -= bigAttack;
     $("#enemyHealth").text(enemyHealth);
-    if (enemyHealth === 0){
+    if (enemyHealth <= 0){
         alert("you win");
 }})
 $(".enemySmallAttack").on("click", function(){
