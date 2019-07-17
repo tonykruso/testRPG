@@ -1,0 +1,38 @@
+#barHolder {
+    background-color: black;
+    width: 25%;
+    height: 25px;
+  }
+  #bar {
+    background-color: red;
+    width:0%;
+    height: 25px;
+  }
+  #by10 {
+    background-color: white;
+    height: 40px;
+    width: 275px;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  #bar1 {
+    background-color: red;
+    width: 0%;
+    height: 25px;
+  }
+  #by20 {
+    background-color: white;
+    height: 40px;
+    width: 275px;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+    cursor: pointer;
+  };
+  
+

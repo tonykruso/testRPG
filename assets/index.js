@@ -1,5 +1,5 @@
 //15 sec timer
-var t = 60;
+var t = 99;
 var intervalId;
 
 function countDown(){
@@ -22,7 +22,7 @@ function decrement(){
     }    
 }
 
-countDown();
+// countDown();
 
 // function resetClock(){
 //     clearInterval(intervalId);
@@ -47,6 +47,36 @@ var enemyBigAttack = 21;
 var enemySmallAttack = 7;
 
 
+//progress bar functions
+var counter=0;
+function moveBy10(x){
+  var width =10;
+  var bar = document.getElementById('bar');
+  counter++;
+  if(counter*x < 101){
+    bar.style.width = counter*x +'%';
+  } 
+}
+
+var counter1=0;
+function moveBy20(x){
+  var width =10;
+  var bar1 = document.getElementById('bar1');
+  counter1++;
+  if(counter1*x < 101){
+    bar1.style.width = counter1*x +'%';
+  } 
+}
+
+function reset(){
+    if (document.getElementById("bar").style.width === "100%"){
+    document.getElementById("bar").style.width = "0%";
+    } else {
+        moveBy10(x);
+        counter++;
+    }
+}
+
 //on click events on all buttons and attacks
 $(".smallAttack").on("click", function(){
     enemyHealth -= smallAttack;
@@ -55,7 +85,7 @@ $(".smallAttack").on("click", function(){
         alert("you win");
 }})
 $(".bigAttack").on("click", function(){
-    enemyHealth -= bigAttack;
+    enemyHealth -= bigAttack;   
     $("#enemyHealth").text(enemyHealth);
     if (enemyHealth <= 0){
         alert("you win");
@@ -72,6 +102,7 @@ $(".enemyBigAttack").on("click", function(){
     if (userHealth <= 0){
         alert("you lose");
 }})
+
 
 
 // //checks health of user to start or end game

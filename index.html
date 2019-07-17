@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" type="text/css" href="styles.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <body>
 
@@ -14,12 +15,12 @@
 <img src="C:\Users\tonyk\OneDrive\Pictures\Saved Pictures\rpg game.jpg" alt="RPG" height="150px" width="150px">
 <h4>Health: </h4>
 <h4 id="userHealth"></h4>
-<button class="smallAttack">Small Attack(8)</button>
-<div class="progress">
-    <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="100" aria-valuemin="100" aria-valuemax="1">
-  </div>
-</div>
-<button class="bigAttack">Big Attack (18)</button>
+<!-- <button class="smallAttack" >Small Attack(8)</button> -->
+  <div type="button" id="by10" class=smallAttack onclick="moveBy10(20)">Small Attack </div> 
+  <div id="barHolder">
+      <div id="bar"></div>
+    </div>
+<div type="button" id="by10" class="bigAttack" onclick="reset()">Big Attack</button>
 </div>
 <br>
 <br>
@@ -28,13 +29,12 @@
 <img src="C:\Users\tonyk\OneDrive\Pictures\Saved Pictures\dan.PNG" alt="RPG2" height="150px" width="150px">
 <h4>Health: </h4>
 <h4 id="enemyHealth"></h4>
-
-<button class="enemySmallAttack">Small Attack(7)</button>
-<div class="progress">
-<div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+<!-- <button class="smallAttack" >Small Attack(8)</button> -->
+<div type="button" id="by20" class=enemySmallAttack onclick="moveBy20(20)">Small Attack </div> 
+<div id="barHolder">
+    <div id="bar1"></div>
+<div type="button" id="by20"class="enemyBigAttack">Big Attack</button>
 </div>
-</div>
-<button class="enemyBigAttack">Big Attack(21)</button>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
