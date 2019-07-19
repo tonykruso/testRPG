@@ -5,37 +5,45 @@
 <body>
 
 <div class = "container">
-<div class="col-md-6">
+  <div class="col-md-6"></div>
 <h1 id="countdown" class="display-3 cd-style ss_fs"></h1>
-</div>
+  </div>
 </div>
 
 <div class="container">
-<h2>Hero</h2>
-<img src="C:\Users\tonyk\OneDrive\Pictures\Saved Pictures\rpg game.jpg" alt="RPG" height="150px" width="150px">
-<h4>Health: </h4>
-<h4 id="userHealth"></h4>
+  <h2>Hero</h2>
+    <img src="C:\Users\tonyk\OneDrive\Pictures\Saved Pictures\rpg game.jpg" alt="RPG" height="150px" width="150px">
+      <h4>Health: </h4>
+      <h4 id="userHealth"></h4>
 <!-- <button class="smallAttack" >Small Attack(8)</button> -->
-  <div type="button" id="by10" class=smallAttack onclick="moveBy10(20)">Small Attack </div> 
-  <div id="barHolder">
-      <div id="bar"></div>
-    </div>
-<div type="button" id="by10" class="bigAttack" onclick="reset()">Big Attack</button>
-</div>
+      <div type="button" id="by10" class=smallAttack onclick="moveBy10(20)">Small Attack </div> 
+       <div id="barHolder">
+        <div id="bar"></div>
+      </div>
+        <div type="button" id="by10" class="bigAttack" onclick="reset()">Big Attack</button>  
+        </div>          
+          <div type="button" id="heroSpecial" class="specialAttack">SPECIAL!</div>
+      </div>
+      </div>
+      
 <br>
 <br>
-<div class="container">
-<h2>Enemy</h2>
-<img src="C:\Users\tonyk\OneDrive\Pictures\Saved Pictures\dan.PNG" alt="RPG2" height="150px" width="150px">
-<h4>Health: </h4>
-<h4 id="enemyHealth"></h4>
-<!-- <button class="smallAttack" >Small Attack(8)</button> -->
-<div type="button" id="by20" class=enemySmallAttack onclick="moveBy20(20)">Small Attack </div> 
-<div id="barHolder">
-    <div id="bar1"></div>
-<div type="button" id="by20"class="enemyBigAttack">Big Attack</button>
-</div>
-</div>
+
+      <div class="container">
+        <h2>Enemy</h2>
+          <img src="C:\Users\tonyk\OneDrive\Pictures\Saved Pictures\dan.PNG" alt="RPG2" height="150px" width="150px">
+            <h4>Health: </h4>
+            <h4 id="enemyHealth"></h4>
+          <div type="button" id="by20" class=enemySmallAttack onclick="moveBy20(20)">Small Attack </div> 
+            <div id="barHolder">
+             <div id="bar1"></div>
+              <div type="button" id="by20"class="enemyBigAttack">Big Attack</button>
+              </div>
+                <div type="button" id="enemySpecial" class="specialAttack">SPECIAL!</div>
+            </div>
+          </div>
+          </div>
+          </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

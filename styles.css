@@ -33,6 +33,17 @@
     padding-top: 10px;
     text-align: center;
     cursor: pointer;
-  };
+  }
+
+  .specialAttack {
+    background-color: white;
+    height: 40px;
+    width: 275px;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+    cursor: pointer;
+  }
   
 

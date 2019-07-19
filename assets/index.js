@@ -34,20 +34,23 @@ function decrement(){
 
 
 //initial health at 100 for each fighter
-var userHealth = 100;
-var enemyHealth = 100;
+var userHealth = 200;
+var enemyHealth = 200;
 
 
 //user attacks
-var bigAttack = 18;
+var bigAttack = 24;
 var smallAttack = 8;
+var specialAttack = 36;
 
 //enemy attacks
 var enemyBigAttack = 21;
 var enemySmallAttack = 7;
+var enemySpecialAttack = 34;
 
 
 //progress bar functions
+//HERO
 var counter=0;
 function moveBy10(x){
   var width =10;
@@ -57,7 +60,7 @@ function moveBy10(x){
     bar.style.width = counter*x +'%';
   } 
 }
-
+//ENEMY
 var counter1=0;
 function moveBy20(x){
   var width =10;
@@ -67,15 +70,16 @@ function moveBy20(x){
     bar1.style.width = counter1*x +'%';
   } 
 }
-
+//reset BAR when full and big attack is clicked(hero)
 function reset(){
     if (document.getElementById("bar").style.width === "100%"){
     document.getElementById("bar").style.width = "0%";
     } else {
-        moveBy10(x);
+        moveBy10();
         counter++;
     }
 }
+
 
 //on click events on all buttons and attacks
 $(".smallAttack").on("click", function(){
@@ -90,10 +94,17 @@ $(".bigAttack").on("click", function(){
     if (enemyHealth <= 0){
         alert("you win");
 }})
+$("#heroSpecial").on("click", function(){
+    enemyHealth -= specialAttack;
+    console.log(specialAttack);
+    $("#enemyHealth").text(enemyHealth);
+    if(enemyHealth <= 0){
+        alert("FATALITY");
+}})
 $(".enemySmallAttack").on("click", function(){
     userHealth -= enemySmallAttack;
     $("#userHealth").text(userHealth);
-    if (userHealth <=0){
+    if (userHealth <= 0){
         alert("you lose");
 }})
 $(".enemyBigAttack").on("click", function(){
@@ -102,29 +113,16 @@ $(".enemyBigAttack").on("click", function(){
     if (userHealth <= 0){
         alert("you lose");
 }})
+$("#enemySpecial").on("click", function(){
+    userHealth -= enemySpecialAttack;
+    console.log(enemySpecialAttack);
+    $("#userHealth").text(userHealth);
+    if(userHealth <= 0){
+        alert("FATALITY");
+}})
 
 
 
-// //checks health of user to start or end game
-// function checkRound(){
-//     console.log("Round 1 Begins");
-//     if(userHealth -= 0){
-//         console.log("game over");
-//         alert("you lost");
-//     }
-//     if(enemyHealth -= 0){
-//         console.log("you win");
-//         alert("you win");
-//     }
-//     playround();
-
-// }
-
-
-//will be the function where the game is actually played
-// function playRound(){
-
-// }
 
 
 
