@@ -1,12 +1,13 @@
 //15 sec timer
-var t = 99;
+var t = 15;
 var intervalId;
-
 function countDown(){
     if (!intervalId){
         intervalId = setInterval(decrement, 1000);
     }
 }
+
+// countDown();
 
 //timer countdown
 function decrement(){
@@ -19,22 +20,22 @@ function decrement(){
     //when timer runs out:
     if(t===0){
         alert("YOU LOSE. TOO SLOW LOSER.");
-    }    
+        resetClock();
+    }  
 }
 
-// countDown();
+function resetClock(){
+    clearInterval(intervalId);
+    intervalId=null;
+    t=15;
+    countDown();
+}
 
-// function resetClock(){
-//     clearInterval(intervalId);
-//     intervalId=null;
-//     t=15;
-//     countDown();
-// }
 
 
 
 //initial health at 100 for each fighter
-var userHealth = 200;
+var userHealth = 180;
 var enemyHealth = 200;
 
 
@@ -50,7 +51,7 @@ var enemySpecialAttack = 34;
 
 
 //progress bar functions
-//HERO
+//HERO small attack clicks
 var counter=0;
 function moveBy10(x){
   var width =10;
@@ -58,9 +59,13 @@ function moveBy10(x){
   counter++;
   if(counter*x < 101){
     bar.style.width = counter*x +'%';
-  } 
+
+  }
 }
-//ENEMY
+
+
+
+//ENEMY small attack clicks
 var counter1=0;
 function moveBy20(x){
   var width =10;
@@ -79,6 +84,15 @@ function reset(){
         counter++;
     }
 }
+function reset1(){
+    if (document.getElementById("bar1").style.width === "100%"){
+    document.getElementById("bar1").style.width = "0%";
+    } else {
+        moveBy20();
+        counter1++;
+    }
+}
+
 
 
 //on click events on all buttons and attacks

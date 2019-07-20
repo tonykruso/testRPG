@@ -4,23 +4,19 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <body>
 
-<div class = "container">
-  <div class="col-md-6"></div>
-<h1 id="countdown" class="display-3 cd-style ss_fs"></h1>
-  </div>
-</div>
+
 
 <div class="container">
   <h2>Hero</h2>
-    <img src="C:\Users\tonyk\OneDrive\Pictures\Saved Pictures\rpg game.jpg" alt="RPG" height="150px" width="150px">
-      <h4>Health: </h4>
-      <h4 id="userHealth"></h4>
-<!-- <button class="smallAttack" >Small Attack(8)</button> -->
+    <img src="C:\Users\tonyk\OneDrive\Pictures\Saved Pictures\rpg game.jpg" alt="RPG" height="75px" width="75px">
+      <h5>Health: </h5>
+      <h5 id="userHealth"></h5>
       <div type="button" id="by10" class=smallAttack onclick="moveBy10(20)">Small Attack </div> 
        <div id="barHolder">
         <div id="bar"></div>
-      </div>
-        <div type="button" id="by10" class="bigAttack" onclick="reset()">Big Attack</button>  
+        <div type="button" id="by10" class="bigAttack" onclick="reset()">Big Attack</button> 
+          <div id="barHolderSpecial">
+            <div id="barSpecial"></div>
         </div>          
           <div type="button" id="heroSpecial" class="specialAttack">SPECIAL!</div>
       </div>
@@ -28,19 +24,29 @@
       
 <br>
 <br>
+<br>
+<br>
+<br>
+<div class = "container">
+    <div class="col-md-6"></div>
+  <h1 id="countdown" class="display-3 cd-style ss_fs"></h1>
+    </div>
+  </div>
 
       <div class="container">
         <h2>Enemy</h2>
-          <img src="C:\Users\tonyk\OneDrive\Pictures\Saved Pictures\dan.PNG" alt="RPG2" height="150px" width="150px">
-            <h4>Health: </h4>
-            <h4 id="enemyHealth"></h4>
+          <img src="C:\Users\tonyk\OneDrive\Pictures\Saved Pictures\dan.PNG" alt="RPG2" height="75px" width="75px">
+            <h5>Health: </h5>
+            <h5 id="enemyHealth"></h5>
           <div type="button" id="by20" class=enemySmallAttack onclick="moveBy20(20)">Small Attack </div> 
             <div id="barHolder">
              <div id="bar1"></div>
-              <div type="button" id="by20"class="enemyBigAttack">Big Attack</button>
-              </div>
-                <div type="button" id="enemySpecial" class="specialAttack">SPECIAL!</div>
-            </div>
+              <div type="button" id="by20"class="enemyBigAttack" onclick="reset1()">Big Attack</button>
+                <div id="barHolderEnemySpecial">
+                  <div id="barEnemySpecial"></div>
+                </div>
+                <div type="button" id="by50" id="enemySpecial" class="specialAttack" >SPECIAL!</div>
+          </div>
           </div>
           </div>
           </div>
