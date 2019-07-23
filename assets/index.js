@@ -1,5 +1,5 @@
-//15 sec timer
-var t = 15;
+//99 sec timer
+var t = 99;
 var intervalId;
 function countDown(){
     if (!intervalId){
@@ -35,8 +35,8 @@ function resetClock(){
 
 
 //initial health at 100 for each fighter
-var userHealth = 180;
-var enemyHealth = 200;
+var userHealth = 200;
+var enemyHealth = 1000;
 
 
 //user attacks
@@ -48,6 +48,27 @@ var specialAttack = 36;
 var enemyBigAttack = 21;
 var enemySmallAttack = 7;
 var enemySpecialAttack = 34;
+
+
+//enemy auto attacks
+var autoAttack = setInterval(function(){
+    $("#userHealth").text(userHealth);
+    if (userHealth <= 0){
+        alert("you lose")
+    }
+    userHealth -= enemySmallAttack;
+    console.log(autoAttack, enemySmallAttack);
+}, 3000);
+
+var bigAutoAttack = setInterval(function(){
+    $("#userHealth").text(userHealth);
+    if(userHealth <= 0){
+        alert("you lose")
+    }
+    userHealth -= enemyBigAttack;
+    console.log(bigAutoAttack, enemyBigAttack);
+}, 10000);
+
 
 
 //progress bar functions
@@ -134,7 +155,6 @@ $("#enemySpecial").on("click", function(){
     if(userHealth <= 0){
         alert("FATALITY");
 }})
-
 
 
 
