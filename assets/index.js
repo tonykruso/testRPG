@@ -67,7 +67,7 @@ var bigAutoAttack = setInterval(function(){
     }
     userHealth -= enemyBigAttack;
     console.log(bigAutoAttack, enemyBigAttack);
-}, 10000);
+}, 15000);
 
 
 
@@ -104,7 +104,7 @@ function reset(){
         moveBy10();
         counter++;
     }
-}
+} 
 function reset1(){
     if (document.getElementById("bar1").style.width === "100%"){
     document.getElementById("bar1").style.width = "0%";
@@ -112,7 +112,7 @@ function reset1(){
         moveBy20();
         counter1++;
     }
-}
+} 
 
 
 
@@ -128,6 +128,7 @@ $(".bigAttack").on("click", function(){
     $("#enemyHealth").text(enemyHealth);
     if (enemyHealth <= 0){
         alert("you win");
+        reset();
 }})
 $("#heroSpecial").on("click", function(){
     enemyHealth -= specialAttack;
@@ -147,6 +148,7 @@ $(".enemyBigAttack").on("click", function(){
     $("#userHealth").text(userHealth);
     if (userHealth <= 0){
         alert("you lose");
+        reset1();
 }})
 $("#enemySpecial").on("click", function(){
     userHealth -= enemySpecialAttack;
